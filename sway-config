@@ -75,7 +75,7 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     bindsym $mod+Return exec $term
 
     # Kill focused window
-    bindsym $mod+Shift+q kill
+    bindsym $mod+x kill
 
     # Start your launcher
     bindsym $mod+d exec $menu
@@ -183,8 +183,17 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #
 #screen brightness
 
-bindsym XF86MonBrightnessDown exec brightnessctl set 1%-
-bindsym XF86MonBrightnessUp exec brightnessctl set 1%+
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+
+#volume
+bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
+bindsym XF86AudioLowerVolume exec amixer set Master 5%-
+bindsym XF86AudioMute exec amixer set Master toggle
+
+# screenshot
+bindsym $mod+Alt+f exec grim
+bindsym $mod+Alt+s  exec grim -g "$(slurp)"
 
 ## audio volume
 ### tpx1c using wireplumber
@@ -234,12 +243,14 @@ bindsym $mod+r mode "resize"
 # Read `man 5 sway-bar` for more information about this section.
 bar {
 
-# swaybar_command waybar
+swaybar_command waybar
     position bottom
-
+    # swaybar_command		swaybar
+    # status_command		i3blocks
+    # wrap_scroll			no
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+    # status_command while date +'%Y-%m-%d %X'; do sleep 1; done
     
 
    # colors {
