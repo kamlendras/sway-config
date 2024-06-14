@@ -74,8 +74,14 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     # Start a terminal
     bindsym $mod+Return exec $term
 
-    # Kill focused window
-    bindsym $mod+x kill
+ 
+bindsym $mod+x kill
+bindsym $mod+t focus parent && kill
+bindsym $mod+p exec shutdown now
+bindsym $mod+z exec chromium
+bindsym $mod+o exec audiorelay
+bindsym $mod+c exec code
+
 
     # Start your launcher
     bindsym $mod+d exec $menu
@@ -183,8 +189,8 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #
 #screen brightness
 
-bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
-bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+bindsym XF86MonBrightnessDown exec brightnessctl set 1%-
+bindsym XF86MonBrightnessUp exec brightnessctl set 1%+
 
 #volume
 bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
