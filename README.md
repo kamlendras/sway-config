@@ -6,9 +6,12 @@
 
 ## What Included?
 * Brightness Level
-* Wofi Application Launcher
+* Wofi Application Launcher (mod+ d)
 * Tap to Click (Touchpad)
-* Grim & Slurp ( ScreenShot )
+* Grim & Slurp ( ScreenShot ) (mod + alt + s)
 * Chromium (mod + z)
 * Audio Relay (mod + o )
+* shutdown (mod + p)
+* close window (mod + x)
+* focus all window (mod + a)
 
